@@ -1,0 +1,279 @@
+{
+  "version": 3,
+  "files": [
+    "Design/card.png",
+    "Design/card1.png",
+    "Design/card2.png",
+    "Design/card3.png",
+    "Design/card4.png",
+    "Design/card5.png",
+    "Design/card6.png",
+    "Design/lose.png",
+    "Design/restart.png",
+    "Design/win.png"
+  ],
+  "settings": {
+    "pot": false,
+    "paddingX": 2,
+    "paddingY": 2,
+    "edgePadding": true,
+    "duplicatePadding": false,
+    "rotation": false,
+    "minWidth": 16,
+    "minHeight": 16,
+    "maxWidth": 1024,
+    "maxHeight": 1024,
+    "square": false,
+    "stripWhitespaceX": true,
+    "stripWhitespaceY": true,
+    "alphaThreshold": 0,
+    "filterMin": "Nearest",
+    "filterMag": "Nearest",
+    "wrapX": "ClampToEdge",
+    "wrapY": "ClampToEdge",
+    "format": "RGBA8888",
+    "alias": true,
+    "outputFormat": "png",
+    "jpegQuality": 0.8999999761581421,
+    "ignoreBlankImages": true,
+    "fast": false,
+    "debug": false,
+    "silent": false,
+    "combineSubdirectories": false,
+    "flattenPaths": false,
+    "premultiplyAlpha": false,
+    "useIndexes": false,
+    "bleed": true,
+    "limitMemory": false,
+    "grid": false,
+    "atlasExtension": ".atlas",
+    "multiatlas": true,
+    "includeNumberOfFolders": 0
+  },
+  "pages": [
+    {"frames": [
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 2,
+          "y": 176,
+          "w": 413,
+          "h": 814
+        },
+        "spriteSourceSize": {
+          "x": 19,
+          "y": 17,
+          "w": 413,
+          "h": 814
+        },
+        "sourceSize": {
+          "w": 450,
+          "h": 850
+        },
+        "name": "lose",
+        "regionIndex": -1
+      },
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 2,
+          "y": 2,
+          "w": 338,
+          "h": 172
+        },
+        "spriteSourceSize": {
+          "x": 12,
+          "y": 9,
+          "w": 338,
+          "h": 172
+        },
+        "sourceSize": {
+          "w": 360,
+          "h": 190
+        },
+        "name": "restart",
+        "regionIndex": -1
+      },
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 417,
+          "y": 176,
+          "w": 413,
+          "h": 814
+        },
+        "spriteSourceSize": {
+          "x": 19,
+          "y": 17,
+          "w": 413,
+          "h": 814
+        },
+        "sourceSize": {
+          "w": 450,
+          "h": 850
+        },
+        "name": "win",
+        "regionIndex": -1
+      }
+    ]},
+    {"frames": [
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 2,
+          "y": 284,
+          "w": 220,
+          "h": 280
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 280
+        },
+        "sourceSize": {
+          "w": 220,
+          "h": 280
+        },
+        "name": "card",
+        "regionIndex": -1
+      },
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 2,
+          "y": 2,
+          "w": 220,
+          "h": 280
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 280
+        },
+        "sourceSize": {
+          "w": 220,
+          "h": 280
+        },
+        "name": "card1",
+        "regionIndex": -1
+      },
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 224,
+          "y": 284,
+          "w": 220,
+          "h": 280
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 280
+        },
+        "sourceSize": {
+          "w": 220,
+          "h": 280
+        },
+        "name": "card2",
+        "regionIndex": -1
+      },
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 224,
+          "y": 2,
+          "w": 220,
+          "h": 280
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 280
+        },
+        "sourceSize": {
+          "w": 220,
+          "h": 280
+        },
+        "name": "card3",
+        "regionIndex": -1
+      },
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 446,
+          "y": 284,
+          "w": 220,
+          "h": 280
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 280
+        },
+        "sourceSize": {
+          "w": 220,
+          "h": 280
+        },
+        "name": "card4",
+        "regionIndex": -1
+      },
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 446,
+          "y": 2,
+          "w": 220,
+          "h": 280
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 280
+        },
+        "sourceSize": {
+          "w": 220,
+          "h": 280
+        },
+        "name": "card5",
+        "regionIndex": -1
+      },
+      {
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 668,
+          "y": 284,
+          "w": 220,
+          "h": 280
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 280
+        },
+        "sourceSize": {
+          "w": 220,
+          "h": 280
+        },
+        "name": "card6",
+        "regionIndex": -1
+      }
+    ]}
+  ]
+}
