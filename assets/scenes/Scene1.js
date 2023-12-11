@@ -124,7 +124,6 @@ class Scene1 extends Phaser.Scene {
 	updateScoreText() {
 		this.scoreText.setText(this.score + ' попыток');
 		if (this.score === 0) {
-			//this.scoreText.setText('ЛОШАРА!!!');
 			this.playerLose();
 			return;
 		}
