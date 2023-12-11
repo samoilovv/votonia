@@ -25,6 +25,7 @@ class Scene1 extends Phaser.Scene {
 		this.openedSecondCard = null;
         this.isFirstOpen = false;
 		this.isSecondOpen = false;
+		this.isLose = false;
 		this.openPairsCount = 6;
 		this.score = 20;
 		this.input.on('gameobjectdown', this.onCardClick, this);
@@ -41,18 +42,9 @@ class Scene1 extends Phaser.Scene {
 		const x1 = 130, x2 = 360, x3 = 590;
 		const y1 = 250, y2 = 540, y3 = 830, y4 = 1120;
         const cardPositions = [
-            { x: x1, y: y1 },
-            { x: x1, y: y2 },
-            { x: x1, y: y3 },
-            { x: x1, y: y4 },
-            { x: x2, y: y1 },
-            { x: x2, y: y2 },
-            { x: x2, y: y3 },
-            { x: x2, y: y4 },
-            { x: x3, y: y1 },
-            { x: x3, y: y2 },
-            { x: x3, y: y3 },
-            { x: x3, y: y4 }
+            { x: x1, y: y1 }, { x: x1, y: y2 }, { x: x1, y: y3 }, { x: x1, y: y4 }, 
+			{ x: x2, y: y1 }, { x: x2, y: y2 }, { x: x2, y: y3 }, { x: x2, y: y4 },
+            { x: x3, y: y1 }, { x: x3, y: y2 }, { x: x3, y: y3 }, { x: x3, y: y4 }
         ];
 
         // Создаем массив с парами текстур для карточек
@@ -68,7 +60,7 @@ class Scene1 extends Phaser.Scene {
     }
 
     onCardClick(pointer, gameObject) {
-        if (gameObject && gameObject.frame && gameObject.frame.name === "card") {
+        if (!this.isLose && gameObject.frame.name === "card") {
 
             // Проверяем, открыта ли первая карточка
             if (!this.isFirstOpen) {
@@ -97,11 +89,7 @@ class Scene1 extends Phaser.Scene {
 		this.isSecondOpen = true;
 		this.openedSecondCard = card;
 		this.score--;
-		this.scoreText.setText(this.score + ' попыток');
-		if (this.score === 0) {
-			this.playerLose();
-			return;
-		}
+		this.updateScoreText();
 		
 		// Если карточки не совпадают
 		if (this.openedFirstCard.frame.name != this.openedSecondCard.frame.name) {
@@ -133,12 +121,22 @@ class Scene1 extends Phaser.Scene {
 		this.scoreText = this.add.text(238, 21, this.score + ' попыток', style);
 	}
 	
+	updateScoreText() {
+		this.scoreText.setText(this.score + ' попыток');
+		if (this.score === 0) {
+			this.scoreText.setText('ЛОШАРА!!!');
+			this.playerLose();
+			return;
+		}
+	}
+	
 	playerWin() {
 		var win = this.add.image(360, 640, "textures", "win");
 		this.fWin = win.setScale(1.2, 1.2);
 	}
 	
 	playerLose() {
+		this.isLose = true;
 		var lose = this.add.image(360, 640, "textures", "lose");
 		this.fLose = lose.setScale(1.2, 1.2);
 		const restart = this.add.image(360, 900, "textures", "restart")
